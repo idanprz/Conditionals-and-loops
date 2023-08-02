@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Print if a number is even or odd</title>
+</head>
+
+<body>
+    <script>
+        var num = 0
+
+        do{
+            num = parseInt(prompt("Enter a number to check if it's even or odd"))
+        }
+        while (isNaN(num))
+
+        var res = "odd"
+
+        if (num % 2 == 0){
+            res = "even"
+        }
+        
+        document.write(num + " is an " + res + " number.<br/>")
+    </script>
+</body>
+
+</html>

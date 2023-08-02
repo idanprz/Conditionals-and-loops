@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Evaluate students</title>
+</head>
+
+<body>
+    <script>
+        var grade = 0;
+        
+        do {
+            grade = parseInt(
+                prompt("Enter your grade (0-100)"))
+        }
+        while (isNaN(grade) || grade < 0 || grade > 100) // get numbers from 0-100
+
+        var eval = "EXCELLENT"
+
+        if (grade < 55) {
+            eval = "BAD"
+        } else if (grade < 65) {
+            eval = "PRETTY BAD"
+        }
+        else if (grade < 75) {
+            eval = "ALMOST GOOD"
+        }
+        else if (grade < 85) {
+            eval = "GOOD"
+        }
+        else if (grade < 95) {
+            eval = "VERY GOOD"
+        }
+
+        document.write("Your evaluation is " + eval + " !<br/>")
+    </script>
+</body>
+
+</html>

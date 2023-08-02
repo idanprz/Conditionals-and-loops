@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Print a range of two numbers</title>
+</head>
+
+<body>
+    <script>
+        var min = 0, max = 0
+
+        do {
+            min = parseInt(prompt("Enter your first number"))
+            max = parseInt(prompt("Enter your second number"))
+        }
+        while (isNaN(min) || isNaN(max)) // verify numbers
+
+        if (min > max) { // find which is bigger
+            var temp = max
+            
+            max = min
+            min = temp
+        }
+
+        var range = ""
+
+        for (let i = min; i <= max; i++) { // construct the range
+            range += i + " "
+        }
+
+        document.write("The range between " + min + " and " + max + " is:<br\>")
+        document.write(range)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Find number of digits</title>
+</head>
+
+<body>
+    <script>
+        var num = 0
+        
+        do{
+            var num = parseInt(
+                prompt("Enter a number between 0-1000 to find its number of digits"))
+        }
+        while (isNaN(num) || num < 0 || num > 1000) // get numbers from 0-1000
+
+        var digits = 1
+        var startingNum = num
+
+        while(num >= 10){ // find number of digits
+            num /= 10
+            digits++
+        }
+        
+        document.write(startingNum + " has " + digits + " digits.<br/>")
+    </script>
+</body>
+
+</html>
