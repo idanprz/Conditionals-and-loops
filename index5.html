@@ -6,14 +6,14 @@
 
 <body>
     <script>
-        var min = 0, max = 0
+        var min = 0, max = 0, input = 0
 
         do {
-            max = parseInt(prompt("Enter your number"))
+            input = parseInt(prompt("Enter your number"))
         }
-        while (isNaN(max)) // verify number
+        while (isNaN(input)) // verify number
 
-        max = 2 * parseInt(max / 2) // round to lowest even number
+        max = 2 * parseInt(input / 2) // round to lowest even number
 
         if (min > max) { // find which is bigger
             var temp = max
@@ -28,7 +28,7 @@
             range += i + " "
         }
 
-        document.write("The range of even numbers between " + min + " and " + max + " is:<br\>")
+        document.write("The range of even numbers between " + input + " and " + max + " is:<br\>")
         document.write(range)
     </script>
 </body>
