@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Print card</title>
+</head>
+
+<body>
+    <script>
+        var card = 2;
+
+        do {
+            card = parseInt(
+                prompt("Enter your card (2-14)"))
+        }
+        while (isNaN(card) || card < 2 || card > 14) // get numbers from 2-14
+
+        var output = ""
+
+        switch (card) {
+            case 11:
+                output = "J"
+                break;
+            case 12:
+                output = "Q"
+                break;
+            case 13:
+                output = "K"
+                break;
+            case 14:
+                output = "A"
+                break;
+            default:
+                output += card
+                break;
+        }
+
+        document.write("Your card is " + output + " .<br/>")
+    </script>
+</body>
+
+</html>
