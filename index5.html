@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Print range of even numbers up to 0</title>
+</head>
+
+<body>
+    <script>
+        var min = 0, max = 0
+
+        do {
+            max = parseInt(prompt("Enter your number"))
+        }
+        while (isNaN(max)) // verify number
+
+        max = 2 * parseInt(max / 2) // round to lowest even number
+
+        if (min > max) { // find which is bigger
+            var temp = max
+
+            max = min
+            min = temp
+        }
+
+        var range = ""
+
+        for (let i = min; i <= max; i += 2) { // construct the range
+            range += i + " "
+        }
+
+        document.write("The range of even numbers between " + min + " and " + max + " is:<br\>")
+        document.write(range)
+    </script>
+</body>
+
+</html>

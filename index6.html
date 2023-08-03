@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Print sum of numbers</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0
+
+        do {
+            var temp = parseInt(prompt("Enter number for summing (-99 when finished)"))
+
+            if (temp == -99) { 
+                break
+            }
+
+            if (!isNaN(temp)) { // if it's a number, sum up
+                sum += temp
+            }
+        }
+        while (true)
+
+        document.write("The sum of your numbers is " + sum + ".<br\>")
+    </script>
+</body>
+
+</html>
